@@ -43,7 +43,7 @@ const AddPeople = () => {
 
 
     return (
-        <div className="container">
+        <div className="">
             {/* Main area start */}
             <Row className="mt-5" >
                 <Col className='col-md-12'>
