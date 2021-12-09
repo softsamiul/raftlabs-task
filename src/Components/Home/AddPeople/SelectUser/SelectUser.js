@@ -54,7 +54,7 @@ const SelectUser = ({users}) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} >  
-            <div className='d-flex justify-content-center'>
+            <div className='d-flex flex-column flex-sm-column flex-lg-row  justify-content-center'>
                 <div>
                     <label htmlFor="user1" className="fw-bold">Select user 1:</label><br />
                     <select id="user1" name="user1" {...register('user1')} className='px-2 py-1 select-option-width'>

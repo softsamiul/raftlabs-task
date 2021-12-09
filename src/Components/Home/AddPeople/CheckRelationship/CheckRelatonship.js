@@ -36,7 +36,7 @@ const CheckRelatonship = ({users}) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} >  
-            <div className='d-flex justify-content-center'>
+            <div className='d-flex flex-column flex-sm-column  flex-md-row justify-content-center'>
                 <div>
                     <label htmlFor="user1" className="fw-bold">Select user:</label> <br />
                     <select id="user1" name="user1" {...register('user1')} className='select-option-width px-2 py-1'>
@@ -45,7 +45,7 @@ const CheckRelatonship = ({users}) => {
                     </select>
                 </div>
                 <div className='mx-3'>
-                    <label htmlFor="relationshipType" className="fw-bold">Tyoe Of Relation:</label> <br />
+                    <label htmlFor="relationshipType" className="fw-bold">Type Of Relation:</label> <br />
                     <select id="relationshipType" name="relationshipType" {...register('relationshipType')} className='select-option-width px-2 py-1'>
                         <option value="friend">Friend</option>
                     </select>

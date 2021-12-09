@@ -45,16 +45,16 @@ const AddPeople = () => {
     return (
         <div className="container">
             {/* Main area start */}
-            <Row className="mt-5">
+            <Row className="mt-5" >
                 <Col className='col-md-12'>
                     <h2 className='mb-3'><i className="fas fa-user-plus me-2"></i>Add Users</h2>
                     {/* People adding form start */}
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input {...register("fullName", { required: true, maxLength: 50 })} placeholder="Enter name"  />
-                        {/* <p className='text-danger'>{errors.fullName?.type === 'required' && "Full Name is required"}</p> */}
-                        <input {...register("role", {required: true, maxLength: 50 })} placeholder="Enter developer role" defaultValue={users[0]} className='mx-2'/>
-                        {/* <p>{errors.role?.type === 'required' && "Role is required"}</p> */}
-                        <input type="submit" value="Add User"/>
+                        <div className='d-flex flex-column flex-md-row justify-content-center'>
+                            <input {...register("fullName", { required: true, maxLength: 50 })} placeholder="Enter name"  />
+                            <input {...register("role", {required: true, maxLength: 50 })} placeholder="Enter developer role" defaultValue={users[0]} className='mx-md-3'/>
+                            <input type="submit" value="Add User"/>
+                        </div>
                     </form>
                     <p className='text-danger fw-bold'>{errors.fullName?.type === 'required' && "Full Name is required"}</p>
 
@@ -79,7 +79,7 @@ const AddPeople = () => {
             </Row>
 
             {/* Check Relationshio start here */}
-            <div className="mt-5">
+            <div className="mt-5" data-aos="fade-right">
                 <h2 className='mb-3'><i className="fas fa-check-double me-2"></i>Check Relationship</h2>
                 <Row md={12}  className="" >
                     <Col className=''>
