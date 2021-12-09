@@ -1,24 +1,19 @@
 import React, { useState } from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2';
-import useUsers from '../../../hooks/useUsers';
-import SetRelationship from '../SetRelationship/SetRelationship';
 import './AddPeople.css'
 import CheckRelatonship from './CheckRelationship/CheckRelatonship';
 import SelectUser from './SelectUser/SelectUser';
 import SingleUser from './SingleUser/SingleUser';
 
 const AddPeople = () => {
-
-    const [usersData, setUsersData] = useState([]);
     const [data, setData] = useState([])
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = d => {
         const newData = [...data, d];
-        setData(newData);
-
+        setData(newData)
         if(newData){
             Swal.fire(`${d.fullName} added successfully!`)
         }else{
@@ -28,6 +23,7 @@ const AddPeople = () => {
                 text: 'Something went wrong!'
               })
         }
+        
         return newData;
     };
     

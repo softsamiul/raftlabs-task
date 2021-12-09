@@ -1,16 +1,6 @@
-/* .users-container{
-    display: grid;
-    grid-template-columns: repeat (4, 1fr );
-    width: 80%;
-    margin: 0 auto;
-} */
-
 .home-container{
     display: grid;
     grid-template-columns: repeat (2, 1fr );
-}
-.fw-bold{
-    /* font-weight: 300; */
 }
 .select-option-width{
     width: 195px;
