@@ -12,7 +12,7 @@ const SelectUser = ({users}) => {
     const onSubmit = connectedData => {
         setConnectedData(connectedData)
 
-        if(connectedData){
+        if(connectedData.user1 !== 'select'){
             Swal.fire(`${connectedData.user1} and ${connectedData.user2} are ${connectedData.relationshipType} now`)
         }else{
             Swal.fire({

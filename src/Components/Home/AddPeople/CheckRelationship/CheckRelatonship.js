@@ -8,7 +8,7 @@ const CheckRelatonship = ({users}) => {
     const {register, handleSubmit} = useForm();
     const onSubmit = checkedData => {
         setCheckedData(checkedData)
-        if(checkedData){
+        if(checkedData.user1 !== 'select'){
             Swal.fire(`${checkedData.user1} > ${matchedFriend} > ${checkedData.user2} `)
         }else{
             Swal.fire({
@@ -33,7 +33,6 @@ const CheckRelatonship = ({users}) => {
 
     const matchedFriend = user1Friend?.find(element => user2Friend?.includes(element));
     console.log(matchedFriend)
-    console.log(user2Friend.includes('Samiul'))
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} >  
