@@ -6,7 +6,6 @@ import './Home.css'
 const Home = () => {
     const getingData = localStorage.getItem('users')
     const users = JSON.parse(getingData);
-    console.log(users[0])
     return (
         <div>
             <div className="top-section d-flex justify-content-center align-items-center mt-4">

@@ -9,7 +9,7 @@ const CheckRelatonship = ({users}) => {
     const onSubmit = checkedData => {
         setCheckedData(checkedData)
         if(checkedData){
-            Swal.fire(`${checkedData.user1} and ${checkedData.user2} are ${checkedData.relationshipType} now`)
+            Swal.fire(`${checkedData.user1} > ${matchedFriend} > ${checkedData.user2} `)
         }else{
             Swal.fire({
                 icon: 'error',
@@ -33,6 +33,7 @@ const CheckRelatonship = ({users}) => {
 
     const matchedFriend = user1Friend?.find(element => user2Friend?.includes(element));
     console.log(matchedFriend)
+    console.log(user2Friend.includes('Samiul'))
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} >  
