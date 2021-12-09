@@ -46,11 +46,9 @@ const SetRelationship = () => {
     // console.log(users)
     return (
         <div>
-
             <h2>Set Relationship</h2>
             <Row xs={1} md={3} className="g-4 w-50 mx-auto my-3" >
                 <Col>
-                {/* <h1>{selectUser}</h1> */}
                     <form onSubmit={handleSubmit(onSubmit)}>  
                         <div>
                             <label htmlFor="user1">Select user:</label>
@@ -73,7 +71,7 @@ const SetRelationship = () => {
                                 {users[0]?.map(user => <option key={user.fullName} value={user.fullName}>{user.fullName}</option>)}
                             </select>
                         </div>
-                        <input type="submit" />
+                        <input type="submit" value="Connect"/>
                     </form>   
                 </Col>
             </Row>

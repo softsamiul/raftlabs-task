@@ -1,6 +1,36 @@
-.users-container{
+/* .users-container{
     display: grid;
     grid-template-columns: repeat (4, 1fr );
     width: 80%;
     margin: 0 auto;
+} */
+
+.home-container{
+    display: grid;
+    grid-template-columns: repeat (2, 1fr );
+}
+.fw-bold{
+    /* font-weight: 300; */
+}
+.select-option-width{
+    width: 195px;
+    margin: 0 auto;
+}
+.border-right{
+    border-right: 1px solid #777;
+}
+input{
+    outline: none;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+input[type=submit]{
+    display: inline-block;
+    background-color: #1849CE;
+    color: #ffff;
+    border: #1849CE;
+    height: 37px;
+    font-weight: bold;
+    padding: 5px 10px;
 }

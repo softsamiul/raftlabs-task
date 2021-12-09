@@ -1,7 +1,7 @@
 import React from 'react';
-import Navigation from '../../../Shared/Navigation/Navigation';
 import AddPeople from '../AddPeople/AddPeople';
-import SetRelationship from '../SetRelationship/SetRelationship';
+import RaftLabsLogo from '../../../assets/images/raftlabs-logo.png';
+import './Home.css'
 
 const Home = () => {
     const getingData = localStorage.getItem('users')
@@ -9,12 +9,15 @@ const Home = () => {
     console.log(users[0])
     return (
         <div>
-            <h2>Home</h2>
-
+            <div className="top-section d-flex justify-content-center align-items-center mt-4">
+                <img style={{'width':'45px','height':'45px' }} src={RaftLabsLogo} alt="RaftLabs Logo" />
+                <h2 className='="mt-5'>
+                    <span className='logo-text'>RaftLabs</span>
+                </h2>
+            </div>
+            <h2 className='mt-2'>ReactJS Developer Test</h2>
+            
             <AddPeople></AddPeople>
-
-
-            {/* <SetRelationship></SetRelationship> */}
         </div>
     );
 };
